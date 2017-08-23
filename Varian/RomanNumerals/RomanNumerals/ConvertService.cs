@@ -54,27 +54,15 @@ namespace RomanNumerals
 
                 int thousandsDigit = number % 10000 - number % 1000;
 
-                if (mappings.Keys.Contains(thousandsDigit))
-                {
-                    sb.Append(mappings[thousandsDigit]);
-                    sb.Append(" ");
-                }
+                AppendDigit(sb, thousandsDigit);
 
                 int hundredsDigit = number % 1000 - number % 100;
 
-                if (mappings.Keys.Contains(hundredsDigit))
-                {
-                    sb.Append(mappings[hundredsDigit]);
-                    sb.Append(" ");
-                }
+                AppendDigit(sb, hundredsDigit);
 
                 int tenthDigit = number % 100 - number % 10;
 
-                if (mappings.Keys.Contains(tenthDigit))
-                {
-                    sb.Append(mappings[tenthDigit]);
-                    sb.Append(" ");
-                }
+                AppendDigit(sb, tenthDigit);                
 
                 int lastDigit = number % 10;
 
@@ -82,6 +70,15 @@ namespace RomanNumerals
                     sb.Append( mappings[lastDigit]);
 
                 return sb.ToString();
+            }
+        }
+
+        private void AppendDigit(StringBuilder sb, int digit)
+        {
+            if (mappings.Keys.Contains(digit))
+            {
+                sb.Append(mappings[digit]);
+                sb.Append(" ");
             }
         }
 
