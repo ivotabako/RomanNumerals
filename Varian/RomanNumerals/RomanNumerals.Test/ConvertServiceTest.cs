@@ -8,7 +8,7 @@ namespace RomanNumerals.Test
     public class ConvertServiceTest
     {
         [TestMethod]
-        public void OneToITest()
+        public void OneTo_I_Test()
         {
             ConvertService svc = new ConvertService();
 
@@ -18,7 +18,7 @@ namespace RomanNumerals.Test
         }
 
         [TestMethod]
-        public void FiveToVTest()
+        public void FiveTo_V_Test()
         {
             ConvertService svc = new ConvertService();
 
@@ -28,7 +28,7 @@ namespace RomanNumerals.Test
         }
 
         [TestMethod]
-        public void TenToXTest()
+        public void TenTo_X_Test()
         {
             ConvertService svc = new ConvertService();
 
@@ -38,7 +38,7 @@ namespace RomanNumerals.Test
         }
 
         [TestMethod]
-        public void FiftyToLTest()
+        public void FiftyTo_L_Test()
         {
             ConvertService svc = new ConvertService();
 
@@ -48,7 +48,7 @@ namespace RomanNumerals.Test
         }
 
         [TestMethod]
-        public void HundredToCTest()
+        public void HundredTo_C_Test()
         {
             ConvertService svc = new ConvertService();
 
@@ -58,7 +58,7 @@ namespace RomanNumerals.Test
         }
 
         [TestMethod]
-        public void FiveHundredToDTest()
+        public void FiveHundredTo_D_Test()
         {
             ConvertService svc = new ConvertService();
 
@@ -68,7 +68,7 @@ namespace RomanNumerals.Test
         }
 
         [TestMethod]
-        public void ThousandToMTest()
+        public void ThousandTo_M_Test()
         {
             ConvertService svc = new ConvertService();
 
@@ -77,5 +77,54 @@ namespace RomanNumerals.Test
             Assert.AreEqual("M", result);
         }
 
+        [TestMethod]
+        public void TwoTo_II_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(2);
+
+            Assert.AreEqual("II", result);
+        }
+
+        [TestMethod]
+        public void FiftyTwoTo_LII_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(52);
+
+            Assert.AreEqual("L II", result);
+        }
+
+        [TestMethod]
+        public void NinetySevenTo_XCVII_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(97);
+
+            Assert.AreEqual("XC VII", result);
+        }
+
+        [TestMethod]
+        public void FourHundredSixtySevenTo_CDLXVII_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(467);
+
+            Assert.AreEqual("CD LX VII", result);
+        }
+
+        [TestMethod]
+        public void EightHundredSeventyFiveTo_DCCCLXXV_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(875);
+
+            Assert.AreEqual("DCCC LXX V", result);
+        }
     }
 }
