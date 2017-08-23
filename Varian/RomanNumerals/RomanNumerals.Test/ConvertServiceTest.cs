@@ -126,5 +126,15 @@ namespace RomanNumerals.Test
 
             Assert.AreEqual("DCCC LXX V", result);
         }
+
+        [TestMethod]
+        public void ThreeThousandSixHundredTwentyFiveTo_MMMDCXXV_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(3625);
+
+            Assert.AreEqual("MMM DC XX V", result);
+        }
     }
 }
