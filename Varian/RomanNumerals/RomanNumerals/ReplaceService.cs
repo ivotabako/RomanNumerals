@@ -22,9 +22,9 @@ namespace RomanNumerals
             ConvertService convertSvc = new ConvertService();
 
             int replacementCount = 0;
-            // this regex expression matches the range from 1 to 3999    
-            // cases like: abc123 456cde are considered not valid.      
-            string resultText = Regex.Replace(text, @"\b(?<!\.)(?<!\-)([1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-3][0-9][0-9][0-9])(?!\.)\b", delegate (Match match)
+            // this regex expression matches the integer numbers range from -3999 to 3999    
+            // cases like: abc123 456cde are considered NO match.      
+            string resultText = Regex.Replace(text, @"\b([1-9]|[1-9][0-9]|[1-9][0-9][0-9]|[1-3][0-9][0-9][0-9])\b", delegate (Match match)
             {
                 replacementCount++;
                 int matchInteger = Convert.ToInt32( match.Value);
