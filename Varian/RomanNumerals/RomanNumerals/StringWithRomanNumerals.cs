@@ -15,6 +15,11 @@ namespace RomanNumerals
     /// </summary>
     public class StringWithRomanNumerals
     {
+        public StringWithRomanNumerals(string text, int replacedNumbersCount)
+        {
+            ReplacedNumbersCount = replacedNumbersCount;
+            Text = text;
+        }
         /// <summary>
         /// the number of replaced integers
         /// </summary>
