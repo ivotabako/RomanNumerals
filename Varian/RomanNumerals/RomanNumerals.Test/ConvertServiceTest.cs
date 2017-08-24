@@ -156,5 +156,55 @@ namespace RomanNumerals.Test
 
             Assert.AreEqual("-35", result);
         }
+
+        [TestMethod]
+        public void FourTo_IV_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(4);
+
+            Assert.AreEqual("IV", result);
+        }
+
+        [TestMethod]
+        public void EightTo_VIII_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(8);
+
+            Assert.AreEqual("VIII", result);
+        }
+
+        [TestMethod]
+        public void ThirdteenTo_XIII_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(13);
+
+            Assert.AreEqual("X III", result);
+        }
+
+        [TestMethod]
+        public void ThousandNinehundredFiftySixTo_MCMLVI_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(1956);
+
+            Assert.AreEqual("M CM L VI", result);
+        }
+
+        [TestMethod]
+        public void ThreeHundredNinetySixTo_CCCXCVI_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(396);
+
+            Assert.AreEqual("CCC XC VI", result);
+        }
     }
 }
