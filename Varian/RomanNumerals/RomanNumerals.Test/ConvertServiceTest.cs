@@ -136,5 +136,25 @@ namespace RomanNumerals.Test
 
             Assert.AreEqual("MMM DC XX V", result);
         }
+
+        [TestMethod]
+        public void NumberBiggerThan3999_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(5432);
+
+            Assert.AreEqual("5432", result);
+        }
+
+        [TestMethod]
+        public void NumberSmallerThan1_Test()
+        {
+            ConvertService svc = new ConvertService();
+
+            string result = svc.DoTransform(-35);
+
+            Assert.AreEqual("-35", result);
+        }
     }
 }

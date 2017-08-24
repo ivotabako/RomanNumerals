@@ -46,6 +46,11 @@ namespace RomanNumerals
 
         public string DoTransform(int number)
         {
+            if (number < 1 || number > 3999 )
+            {
+                return number.ToString();
+            }
+
             if(mappings.Keys.Contains(number))
                 return mappings[number];
             else
