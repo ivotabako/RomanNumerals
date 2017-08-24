@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace RomanNumerals
 {
+    /// <summary>
+    /// the class converts arabic numbers to roman numerals
+    /// </summary>
     public class ConvertService
     {
         private Dictionary<int, string> mappings = new Dictionary<int, string>();
@@ -44,6 +47,11 @@ namespace RomanNumerals
             mappings.Add(3000, "MMM");            
         }
 
+        /// <summary>
+        /// Transforms an arabic number between 1 and 3999 to roman one
+        /// </summary>
+        /// <param name="number">the arabic number input</param>
+        /// <returns>the string representing the roman numeral</returns>
         public string DoTransform(int number)
         {
             if (number < 1 || number > 3999 )
