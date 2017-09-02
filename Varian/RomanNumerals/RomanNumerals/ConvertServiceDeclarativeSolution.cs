@@ -10,7 +10,12 @@ namespace RomanNumerals
     {
         public string DoTransform(int number)
         {
-            throw new NotImplementedException();
+            if (number < 1 || number > 3999)
+            {
+                return number.ToString();
+            }
+
+            return number.ToRoman();
         }
     }
 }

@@ -12,9 +12,9 @@ namespace RomanNumerals.Test
         [TestInitialize()]
         public void Initialize()
         {
-            //svc = new ConvertServiceDeclarativeSolution();
+            svc = new ConvertServiceDeclarativeSolution();
             //svc = new ConvertService();
-            svc = new ConvertServiceAlgorithmicSolution();
+            //svc = new ConvertServiceAlgorithmicSolution();
         }
 
         [TestMethod]
