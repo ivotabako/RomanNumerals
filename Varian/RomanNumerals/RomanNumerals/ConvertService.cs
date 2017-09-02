@@ -9,7 +9,7 @@ namespace RomanNumerals
     /// <summary>
     /// the class converts arabic numbers to roman numerals
     /// </summary>
-    public class ConvertService
+    public class ConvertService : ISolution
     {
         private Dictionary<int, string> mappings = new Dictionary<int, string>();
         

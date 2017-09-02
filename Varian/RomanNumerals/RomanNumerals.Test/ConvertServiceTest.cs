@@ -7,11 +7,20 @@ namespace RomanNumerals.Test
     [TestClass]
     public class ConvertServiceTest
     {
+        private ISolution svc;
+
+        [TestInitialize()]
+        public void Initialize()
+        {
+            //svc = new ConvertServiceDeclarativeSolution();
+            //svc = new ConvertService();
+            svc = new ConvertServiceAlgorithmicSolution();
+        }
+
         [TestMethod]
         public void OneTo_I_Test()
         {
-            ConvertService svc = new ConvertService();
-
+            
             string result = svc.DoTransform(1);
 
             Assert.AreEqual("I", result);
@@ -19,9 +28,7 @@ namespace RomanNumerals.Test
 
         [TestMethod]
         public void FiveTo_V_Test()
-        {
-            ConvertService svc = new ConvertService();
-
+        {           
             string result = svc.DoTransform(5);
 
             Assert.AreEqual("V", result);
@@ -29,9 +36,7 @@ namespace RomanNumerals.Test
 
         [TestMethod]
         public void TenTo_X_Test()
-        {
-            ConvertService svc = new ConvertService();
-
+        {            
             string result = svc.DoTransform(10);
 
             Assert.AreEqual("X", result);
@@ -39,9 +44,7 @@ namespace RomanNumerals.Test
 
         [TestMethod]
         public void FiftyTo_L_Test()
-        {
-            ConvertService svc = new ConvertService();
-
+        {            
             string result = svc.DoTransform(50);
 
             Assert.AreEqual("L", result);
@@ -49,9 +52,7 @@ namespace RomanNumerals.Test
 
         [TestMethod]
         public void HundredTo_C_Test()
-        {
-            ConvertService svc = new ConvertService();
-
+        {          
             string result = svc.DoTransform(100);
 
             Assert.AreEqual("C", result);
@@ -60,8 +61,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void FiveHundredTo_D_Test()
         {
-            ConvertService svc = new ConvertService();
-
+           
             string result = svc.DoTransform(500);
 
             Assert.AreEqual("D", result);
@@ -70,8 +70,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void ThousandTo_M_Test()
         {
-            ConvertService svc = new ConvertService();
-
+         
             string result = svc.DoTransform(1000);
 
             Assert.AreEqual("M", result);
@@ -80,8 +79,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void TwoTo_II_Test()
         {
-            ConvertService svc = new ConvertService();
-
+          
             string result = svc.DoTransform(2);
 
             Assert.AreEqual("II", result);
@@ -90,8 +88,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void FiftyTwoTo_LII_Test()
         {
-            ConvertService svc = new ConvertService();
-
+          
             string result = svc.DoTransform(52);
 
             Assert.AreEqual("L II", result);
@@ -100,8 +97,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void NinetySevenTo_XCVII_Test()
         {
-            ConvertService svc = new ConvertService();
-
+           
             string result = svc.DoTransform(97);
 
             Assert.AreEqual("XC VII", result);
@@ -110,8 +106,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void FourHundredSixtySevenTo_CDLXVII_Test()
         {
-            ConvertService svc = new ConvertService();
-
+            
             string result = svc.DoTransform(467);
 
             Assert.AreEqual("CD LX VII", result);
@@ -120,8 +115,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void EightHundredSeventyFiveTo_DCCCLXXV_Test()
         {
-            ConvertService svc = new ConvertService();
-
+          
             string result = svc.DoTransform(875);
 
             Assert.AreEqual("DCCC LXX V", result);
@@ -130,8 +124,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void ThreeThousandSixHundredTwentyFiveTo_MMMDCXXV_Test()
         {
-            ConvertService svc = new ConvertService();
-
+          
             string result = svc.DoTransform(3625);
 
             Assert.AreEqual("MMM DC XX V", result);
@@ -140,8 +133,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void NumberBiggerThan3999_Test()
         {
-            ConvertService svc = new ConvertService();
-
+          
             string result = svc.DoTransform(5432);
 
             Assert.AreEqual("5432", result);
@@ -150,8 +142,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void NumberSmallerThan1_Test()
         {
-            ConvertService svc = new ConvertService();
-
+           
             string result = svc.DoTransform(-35);
 
             Assert.AreEqual("-35", result);
@@ -160,7 +151,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void FourTo_IV_Test()
         {
-            ConvertService svc = new ConvertService();
+            
 
             string result = svc.DoTransform(4);
 
@@ -170,7 +161,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void EightTo_VIII_Test()
         {
-            ConvertService svc = new ConvertService();
+            
 
             string result = svc.DoTransform(8);
 
@@ -180,7 +171,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void ThirdteenTo_XIII_Test()
         {
-            ConvertService svc = new ConvertService();
+            
 
             string result = svc.DoTransform(13);
 
@@ -190,7 +181,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void ThousandNinehundredFiftySixTo_MCMLVI_Test()
         {
-            ConvertService svc = new ConvertService();
+            
 
             string result = svc.DoTransform(1956);
 
@@ -200,7 +191,7 @@ namespace RomanNumerals.Test
         [TestMethod]
         public void ThreeHundredNinetySixTo_CCCXCVI_Test()
         {
-            ConvertService svc = new ConvertService();
+            
 
             string result = svc.DoTransform(396);
 

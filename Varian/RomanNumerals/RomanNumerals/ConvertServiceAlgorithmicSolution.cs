@@ -9,7 +9,7 @@ namespace RomanNumerals
     /// <summary>
     /// the class converts arabic numbers to roman numerals
     /// </summary>
-    public class ConvertServiceAlgorithmicSolution
+    public class ConvertServiceAlgorithmicSolution : ISolution
     {
         /// <summary>
         /// Transforms an arabic number between 1 and 3999 to roman one
