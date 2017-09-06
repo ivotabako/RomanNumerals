@@ -44,7 +44,6 @@
     <Compile Include="ConvertServiceAlgorithmicSolution.cs" />
     <Compile Include="ConvertServiceDeclarativeSolution.cs" />
     <Compile Include="ISolution.cs" />
-    <Compile Include="NumberExtentions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReplaceService.cs" />
     <Compile Include="StringWithRomanNumerals.cs" />
