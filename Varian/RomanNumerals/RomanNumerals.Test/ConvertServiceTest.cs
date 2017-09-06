@@ -197,5 +197,15 @@ namespace RomanNumerals.Test
 
             Assert.AreEqual("CCC XC VI", result);
         }
+
+        [TestMethod]
+        public void NineTo_IX_Test()
+        {
+
+
+            string result = svc.DoTransform(9);
+
+            Assert.AreEqual("IX", result);
+        }
     }
 }
