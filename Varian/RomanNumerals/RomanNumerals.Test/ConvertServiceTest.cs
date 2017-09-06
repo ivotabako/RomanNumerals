@@ -13,7 +13,7 @@ namespace RomanNumerals.Test
         public void Initialize()
         {
             svc = new ConvertServiceDeclarativeSolution();
-            //svc = new ConvertService();
+            //svc = new ConvertServiceSimpleSolution();
             //svc = new ConvertServiceAlgorithmicSolution();
         }
 

@@ -19,7 +19,7 @@ namespace RomanNumerals
         /// </returns>
         public StringWithRomanNumerals DoTransform(string text)
         {
-            ConvertService convertSvc = new ConvertService();
+            ConvertServiceSimpleSolution convertSvc = new ConvertServiceSimpleSolution();
 
             int replacementCount = 0;
             // this regex expression matches the integer numbers range from -3999 to 3999    

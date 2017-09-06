@@ -9,11 +9,11 @@ namespace RomanNumerals
     /// <summary>
     /// the class converts arabic numbers to roman numerals
     /// </summary>
-    public class ConvertService : ISolution
+    public class ConvertServiceSimpleSolution : ISolution
     {
         private Dictionary<int, string> mappings = new Dictionary<int, string>();
         
-        public ConvertService()
+        public ConvertServiceSimpleSolution()
         {
             mappings.Add(1, "I");
             mappings.Add(2, "II");

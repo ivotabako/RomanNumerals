@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace RomanNumerals
 {
+    /// <summary>
+    /// the class converts arabic numbers to roman numerals
+    /// </summary>
     public class ConvertServiceDeclarativeSolution : ISolution
     {
+        /// <summary>
+        /// Transforms an arabic number between 1 and 3999 to roman one
+        /// </summary>
+        /// <param name="number">the arabic number input</param>
+        /// <returns>the string representing the roman numeral</returns>
         public string DoTransform(int number)
         {
             if (number < 1 || number > 3999)
@@ -15,22 +23,10 @@ namespace RomanNumerals
                 return number.ToString();
             }
 
-            return ToRoman2(number);
+            return ToRoman(number);
         }
 
-        private int ToRoman2Helper(int number, int step, string roman, Predicate<int> test, StringBuilder sb)
-        {
-            if (test.Invoke(number))
-            {
-                sb.Append(roman);
-
-                return ToRoman2Helper(number - step, step, roman, test, sb);
-            }            
-
-            return number;
-        }
-
-        public string ToRoman2(int self)
+        public string ToRoman(int self)
         {
             if (self == 0)
             {
@@ -59,6 +55,18 @@ namespace RomanNumerals
 
                 return sb.ToString().Trim();
             }
+        }
+
+        private int ToRoman2Helper(int number, int step, string roman, Predicate<int> test, StringBuilder sb)
+        {
+            if (test.Invoke(number))
+            {
+                sb.Append(roman);
+
+                return ToRoman2Helper(number - step, step, roman, test, sb);
+            }
+
+            return number;
         }
     }
 }
