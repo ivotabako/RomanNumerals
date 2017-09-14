@@ -3,7 +3,7 @@ The .Net solution contains two projects.
 They are called RomanNumerals and RomanNumerals.Test .
 
 RomanNumerals project contains the implemetation of the two tasks  
-given to me by the HR of Varian.
+given to me by the HR of Varian. You can find the task in the pdf file.
 
 RomanNumerals.Test project contains the necessary unit tests.
 
